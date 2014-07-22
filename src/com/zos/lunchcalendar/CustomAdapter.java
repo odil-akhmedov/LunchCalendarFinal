@@ -3,6 +3,7 @@ package com.zos.lunchcalendar;
 import java.util.ArrayList;
 
 import android.content.Context;
+import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -61,6 +62,8 @@ public class CustomAdapter extends ArrayAdapter<DailyMenu> {
 
 			TextView lunchTitle = (TextView) row.findViewById(R.id.showTitle);
 			lunchTitle.setText(item.getTitle());
+			
+			lunchDate.setBackgroundColor(Color.GRAY);
 			// assign the icon
 			// ImageView lunchIcon = (ImageView)
 			// row.findViewById(R.id.imageview);
