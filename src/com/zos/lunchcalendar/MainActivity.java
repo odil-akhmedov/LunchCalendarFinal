@@ -219,7 +219,8 @@ public class MainActivity extends Activity {
 
 	public void open(View view) {
 		Toast.makeText(MainActivity.this, "Updating...", Toast.LENGTH_SHORT).show(); // Notify user of process taking place
-		obj = new JSONCalendarParser(url, getApplicationContext());
+		//obj = new JSONCalendarParser(url, getApplicationContext());
+		obj = new JSONCalendarParser("JSON.json", getApplicationContext(), true);
 		obj.fetchJSON();
 		while(obj.parsingComplete);
 
@@ -245,7 +246,8 @@ public class MainActivity extends Activity {
 	}
 
 	public void startParsing() {
-		obj = new JSONCalendarParser(url, getApplicationContext());
+		//obj = new JSONCalendarParser(url, getApplicationContext());
+		obj = new JSONCalendarParser("JSON.json", getApplicationContext(), true);
 		obj.fetchJSON();
 		while (obj.parsingComplete);
 
