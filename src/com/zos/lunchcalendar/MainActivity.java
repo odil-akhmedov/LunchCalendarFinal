@@ -154,10 +154,11 @@ public class MainActivity extends Activity {
 	@Override
 	protected void onResume() {
 		// TODO Auto-generated method stub
+		//super.recreate();
 		super.onResume();
 		set_update_date(); // SET UPDATE DATE -ZR
 		Log.v(TAG, "onResume method called");
-		super.recreate();
+		
 	}
 
 	@Override

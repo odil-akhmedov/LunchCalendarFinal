@@ -143,8 +143,11 @@ public class SettingsActivity extends Activity {
 				savePreferences("PreferredDay", preferredDay);
 
 				setNotificationTime();
-				finish();
-
+				Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+		        //intent.putExtra("someData", "Here is some data");
+		        startActivityForResult(intent, 1);
+				//finish();
+				
 			}
 		});
 
