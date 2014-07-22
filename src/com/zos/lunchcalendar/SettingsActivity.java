@@ -183,8 +183,11 @@ public class SettingsActivity extends Activity {
 			adjustingTime = 0 - adjustingTime; // same day + preferredTime
 		else
 			adjustingTime = 0 - adjustingTime;
-
+		
+		
+		
 		ArrayList<Long> notifyTime = new ArrayList<Long>();
+		ArrayList<String> mealsToNofify = new ArrayList<String>();
 		String startTime = "";
 		for (int i = 0; i < preferredMeals.size(); i++) {
 			for (int j = 0; j < menuForMonth.size(); j++) {
@@ -193,6 +196,7 @@ public class SettingsActivity extends Activity {
 					startTime = menuForMonth.get(i).getStartTime();
 					notifyTime.add(convertToTimeStamp(startTime, "yyyy-MM-dd")
 							- adjustingTime);
+					mealsToNofify.add(preferredMeals.get(i).replace(";", ""));
 				}
 			}
 		}
@@ -200,9 +204,9 @@ public class SettingsActivity extends Activity {
 		ArrayList<PendingIntent> pendingIntent = new ArrayList<PendingIntent>();
 		ArrayList<Intent> Intent = new ArrayList<Intent>();
 		for (int i = 0; i < notifyTime.size(); i++) {
-			if (System.currentTimeMillis() < notifyTime.get(i)) {
+			if (System.currentTimeMillis() > notifyTime.get(i)) {
 				Intent.add(new Intent(SettingsActivity.this, MyReceiver.class));
-				Intent.get(i).putExtra("MEAL", "FOOOOOD");
+				Intent.get(i).putExtra("MEAL", mealsToNofify.get(i));
 				pendingIntent.add(PendingIntent.getBroadcast(
 						SettingsActivity.this, 0, Intent.get(i), 0));
 
