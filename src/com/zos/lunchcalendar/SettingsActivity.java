@@ -196,8 +196,7 @@ public class SettingsActivity extends Activity {
 					startTime = menuForMonth.get(i).getStartTime();
 					notifyTime.add(convertToTimeStamp(startTime, "yyyy-MM-dd")
 							- adjustingTime);
-					//mealsToNofify.add(preferredMeals.get(i).replace(";", ""));
-					mealsToNofify.add(preferredMeals.get(i));
+					mealsToNofify.add(preferredMeals.get(i).replace(";", "\n"));
 				}
 			}
 		}
@@ -205,7 +204,7 @@ public class SettingsActivity extends Activity {
 		ArrayList<PendingIntent> pendingIntent = new ArrayList<PendingIntent>();
 		ArrayList<Intent> Intent = new ArrayList<Intent>();
 		for (int i = 0; i < notifyTime.size(); i++) {
-			if (System.currentTimeMillis() < notifyTime.get(i)) {
+			if (System.currentTimeMillis() < notifyTime.get(i)) { //than means notification should be in future 
 				Intent.add(new Intent(SettingsActivity.this, MyReceiver.class));
 				Intent.get(i).putExtra("MEAL", mealsToNofify.get(i).toString());
 				pendingIntent.add(PendingIntent.getBroadcast(
@@ -213,10 +212,8 @@ public class SettingsActivity extends Activity {
 
 				AlarmManager alarmManager = (AlarmManager) getSystemService(ALARM_SERVICE);
 
-				//alarmManager.set(AlarmManager.RTC, notifyTime.get(i),
-					//	pendingIntent.get(i));
-				alarmManager.set(AlarmManager.RTC, System.currentTimeMillis(),
-					pendingIntent.get(i));
+				alarmManager.set(AlarmManager.RTC, notifyTime.get(i),
+						pendingIntent.get(i));
 			}
 		}
 
