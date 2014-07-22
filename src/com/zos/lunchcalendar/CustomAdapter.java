@@ -1,9 +1,14 @@
 package com.zos.lunchcalendar;
 
 import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.Set;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
+import android.content.SharedPreferences;
 import android.graphics.Color;
+import android.preference.PreferenceManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,16 +16,16 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-public class CustomAdapter extends ArrayAdapter<DailyMenu> {
+@SuppressLint("NewApi") public class CustomAdapter extends ArrayAdapter<DailyMenu> {
 
 	private Context context;
 	private int viewType;
 	// private DailyMenu[] data;
 	private ArrayList<DailyMenu> data = new ArrayList<DailyMenu>();
 	private ArrayList<String> mealsList = new ArrayList<String>();
-	
+	private Set<String> preferredMealsFromArray = new HashSet<String>();
+	private ArrayList<String> preferredMeals = new ArrayList<String>();
 	private LayoutInflater layoutInflater;
-	
 
 	public CustomAdapter(Context context, int textViewResourceId,
 			ArrayList<DailyMenu> lunch_data, int viewType) {
@@ -33,16 +38,16 @@ public class CustomAdapter extends ArrayAdapter<DailyMenu> {
 		this.layoutInflater = LayoutInflater.from(this.context);
 	}
 
-	//special for Checked List
-	public CustomAdapter(String flag, Context context, int textViewResourceId, ArrayList<String> lunchList, int viewType) {
+	// special for Checked List
+	public CustomAdapter(String flag, Context context, int textViewResourceId,
+			ArrayList<String> lunchList, int viewType) {
 		super(context, textViewResourceId);
 		this.viewType = viewType;
 		this.context = context;
 		this.mealsList = lunchList;
 		this.layoutInflater = LayoutInflater.from(this.context);
 	}
-	
-	
+
 	@Override
 	public View getView(int position, View convertView, ViewGroup parent) {
 		if (this.viewType == 0) {
@@ -62,8 +67,10 @@ public class CustomAdapter extends ArrayAdapter<DailyMenu> {
 
 			TextView lunchTitle = (TextView) row.findViewById(R.id.showTitle);
 			lunchTitle.setText(item.getTitle());
-			
-			lunchDate.setBackgroundColor(Color.GRAY);
+			if (isPreferredMeal(item.getTitle())) {
+				lunchDate.setBackgroundColor(Color.GRAY);
+				lunchTitle.setBackgroundColor(Color.GRAY);
+			}
 			// assign the icon
 			// ImageView lunchIcon = (ImageView)
 			// row.findViewById(R.id.imageview);
@@ -82,7 +89,7 @@ public class CustomAdapter extends ArrayAdapter<DailyMenu> {
 			TextView lunchData = (TextView) row.findViewById(R.id.showData);
 			lunchData.setText(item.getStartTime() + "\n" + item.getTitle());
 			return row;
-		} else  { // checked list
+		} else { // checked list
 			View row = convertView;
 			if (row == null) {
 				row = this.layoutInflater.inflate(
@@ -92,8 +99,29 @@ public class CustomAdapter extends ArrayAdapter<DailyMenu> {
 			TextView lunchData = (TextView) row.findViewById(R.id.mealsList);
 			lunchData.setText(item);
 			return row;
-		} 
+		}
 
 	}
 
+	private boolean isPreferredMeal(String meal) {
+		// TODO Auto-generated method stub
+		SharedPreferences sharedPreferences = PreferenceManager
+				.getDefaultSharedPreferences(context);
+
+		preferredMealsFromArray = sharedPreferences.getStringSet(
+				"PreferredMeals", null);
+		if (preferredMealsFromArray != null) {
+			for (String str : preferredMealsFromArray)
+				preferredMeals.add(str);
+
+		}
+		for (int i = 0; i < preferredMeals.size(); i++) {
+
+			if (preferredMeals.get(i).contains(meal)) {
+				return true;
+			} else
+				return false;
+		}
+		return false;
+	}
 }
