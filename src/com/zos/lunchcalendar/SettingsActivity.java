@@ -196,7 +196,8 @@ public class SettingsActivity extends Activity {
 					startTime = menuForMonth.get(i).getStartTime();
 					notifyTime.add(convertToTimeStamp(startTime, "yyyy-MM-dd")
 							- adjustingTime);
-					mealsToNofify.add(preferredMeals.get(i).replace(";", ""));
+					//mealsToNofify.add(preferredMeals.get(i).replace(";", ""));
+					mealsToNofify.add(preferredMeals.get(i));
 				}
 			}
 		}
@@ -204,16 +205,18 @@ public class SettingsActivity extends Activity {
 		ArrayList<PendingIntent> pendingIntent = new ArrayList<PendingIntent>();
 		ArrayList<Intent> Intent = new ArrayList<Intent>();
 		for (int i = 0; i < notifyTime.size(); i++) {
-			if (System.currentTimeMillis() > notifyTime.get(i)) {
+			if (System.currentTimeMillis() < notifyTime.get(i)) {
 				Intent.add(new Intent(SettingsActivity.this, MyReceiver.class));
-				Intent.get(i).putExtra("MEAL", mealsToNofify.get(i));
+				Intent.get(i).putExtra("MEAL", mealsToNofify.get(i).toString());
 				pendingIntent.add(PendingIntent.getBroadcast(
 						SettingsActivity.this, 0, Intent.get(i), 0));
 
 				AlarmManager alarmManager = (AlarmManager) getSystemService(ALARM_SERVICE);
 
-				alarmManager.set(AlarmManager.RTC, notifyTime.get(i),
-						pendingIntent.get(i));
+				//alarmManager.set(AlarmManager.RTC, notifyTime.get(i),
+					//	pendingIntent.get(i));
+				alarmManager.set(AlarmManager.RTC, System.currentTimeMillis(),
+					pendingIntent.get(i));
 			}
 		}
 
