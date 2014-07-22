@@ -88,7 +88,6 @@ public class JSONCalendarParser {
 		// TODO Auto-generated method stub
 
 		for (int i = 0; i < content.size(); i++) {
-			System.out.println("ContentInside= " + content.get(i));
 			DailyMenu menuForDay = new DailyMenu(content.get(i),
 					startTime.get(i), endTime.get(i));
 			menuForMonth.add(menuForDay);
@@ -113,9 +112,10 @@ public class JSONCalendarParser {
 			JSONObject sys = reader.getJSONObject("feed");
 
 			JSONArray array = sys.getJSONArray("entry");
-
+			
 			for (int i = 0; i < array.length(); i++) { // initializing the
 														// monthly menu
+				System.out.println("Entries " + array.length());
 				JSONObject product = new JSONObject(array.getJSONObject(i)
 						.getString("title"));
 				content.add(product.getString("$t"));
@@ -203,11 +203,9 @@ public class JSONCalendarParser {
 				// Here we are printing each line at a time from the file we
 				// read
 				buf.append(sCurrentLine);
-				System.out.println(sCurrentLine);
-
+			
 			}
 			json = buf.toString().replaceAll("[\n\r]", "");
-			System.out.println("Json_str" + json);
 		} catch (IOException ex) {
 			Log.v(TAG, "NullPointer? called");
 			ex.printStackTrace();

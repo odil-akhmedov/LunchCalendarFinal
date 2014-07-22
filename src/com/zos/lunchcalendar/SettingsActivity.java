@@ -207,7 +207,7 @@ public class SettingsActivity extends Activity {
 		ArrayList<PendingIntent> pendingIntent = new ArrayList<PendingIntent>();
 		ArrayList<Intent> Intent = new ArrayList<Intent>();
 		for (int i = 0; i < notifyTime.size(); i++) {
-			if (System.currentTimeMillis() < notifyTime.get(i)) { //than means notification should be in future 
+			//if (System.currentTimeMillis() < notifyTime.get(i)) { //than means notification should be in future 
 				Intent.add(new Intent(SettingsActivity.this, MyReceiver.class));
 				Intent.get(i).putExtra("MEAL", mealsToNofify.get(i).toString());
 				pendingIntent.add(PendingIntent.getBroadcast(
@@ -217,7 +217,7 @@ public class SettingsActivity extends Activity {
 
 				alarmManager.set(AlarmManager.RTC, notifyTime.get(i),
 						pendingIntent.get(i));
-			}
+			//}
 		}
 
 	}
