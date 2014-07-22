@@ -82,6 +82,15 @@ public class MainActivity extends Activity {
 			setContentView(R.layout.activity_main_grid);
 			break;
 		}
+		update = (Button)findViewById(R.id.updateTime);
+		update.setOnClickListener(new View.OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				
+			}
+		});
 
 		set_update_date(); // SET UPDATE DATE -ZR
 		startParsing();
@@ -220,7 +229,7 @@ public class MainActivity extends Activity {
 	protected void onResume() {
 		// TODO Auto-generated method stub
 		super.onResume();
-		set_update_date(); // SET UPDATE DATE -ZR
+		//set_update_date(); // SET UPDATE DATE -ZR
 		Log.v(TAG, "onResume method called");
 	}
 
