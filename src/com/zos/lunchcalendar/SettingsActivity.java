@@ -78,7 +78,7 @@ public class SettingsActivity extends Activity {
 		timeSpinner = (Spinner) findViewById(R.id.timeSpinner);
 		daySpinner = (Spinner) findViewById(R.id.daySpinner);
 
-		AssetManager am = getApplicationContext().getAssets();
+		/*AssetManager am = getApplicationContext().getAssets();
 
 		try {
 			if (Arrays.asList(getResources().getAssets().list("")).contains("JSON.json")) {
@@ -101,19 +101,19 @@ public class SettingsActivity extends Activity {
 			}
 		} catch (IOException e) { // TODO Auto-generated catch block
 			e.printStackTrace();
-		}
+		}*/
 		
 
 		/** working **/
 		//obj = new JSONCalendarParser("JSON.json", getApplicationContext(), true);
-		/*obj = new JSONCalendarParser(url, getApplicationContext());
+		obj = new JSONCalendarParser(url, getApplicationContext());
 		
 		obj.fetchJSON();
 
 		while(obj.parsingComplete);
 
 		mealsListText = obj.getContentFromJson();
-		menuForMonth = obj.getMenuFromJson();*/
+		menuForMonth = obj.getMenuFromJson();
 		
 		System.out.println("mealsListText " + mealsListText.size());
 
