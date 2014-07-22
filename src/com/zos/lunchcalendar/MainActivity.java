@@ -25,6 +25,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.GridView;
 import android.widget.ImageView;
@@ -55,6 +56,7 @@ public class MainActivity extends Activity {
 
 	Date notificationTime;
 	private PendingIntent pendingIntent;
+	Button updateJSON;
 
 	@SuppressLint("NewApi")
 	@Override
@@ -80,7 +82,7 @@ public class MainActivity extends Activity {
 			setContentView(R.layout.activity_main_grid);
 			break;
 		}
-
+		updateJSON = (Button)findViewById(R.id.button1);
 		set_update_date(); // SET UPDATE DATE -ZR
 		startParsing();
 		// adapter = new CalendarAdapters(getApplicationContext());
