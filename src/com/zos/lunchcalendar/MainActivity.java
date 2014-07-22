@@ -181,7 +181,12 @@ public class MainActivity extends Activity {
 		load_update_date();
 		TextView txt_up_date = (TextView) findViewById(R.id.txt_date);
 		
-		txt_up_date.setText(Global.update_date);
+		//txt_up_date.setText(Global.update_date);
+		Calendar c = Calendar.getInstance();
+        SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm");
+        String formattedDate = df.format(c.getTime());
+		
+		txt_up_date.setText(formattedDate);
 	}
 	
 	
