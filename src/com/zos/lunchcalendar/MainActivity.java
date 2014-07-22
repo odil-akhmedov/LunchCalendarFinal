@@ -25,6 +25,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.GridView;
 import android.widget.ImageView;
@@ -53,6 +54,7 @@ public class MainActivity extends Activity {
 	ArrayList<String> preferredMeals = new ArrayList<String>();
 	String preferredDay; // Day before, same day...
 
+	Button update;
 	Date notificationTime;
 	private PendingIntent pendingIntent;
 

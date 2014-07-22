@@ -23,7 +23,7 @@
     </ListView>
 
     <Button
-        android:id="@+id/button1"
+        android:id="@+id/updateTime"
         android:layout_width="131dp"
         android:layout_height="25dp"
         android:layout_alignParentLeft="true"
