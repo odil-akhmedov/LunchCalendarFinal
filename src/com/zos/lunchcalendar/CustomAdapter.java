@@ -84,10 +84,15 @@ import android.widget.TextView;
 						R.layout.custom_grid_textview, null);
 			}
 			DailyMenu item = this.data.get(position);
-			System.out.println("StartTime grid = " + item.getStartTime());
 
 			TextView lunchData = (TextView) row.findViewById(R.id.showData);
 			lunchData.setText(item.getStartTime() + "\n" + item.getTitle());
+			
+			if (isPreferredMeal(item.getTitle())) {
+				lunchData.setBackgroundColor(Color.GRAY);
+				//lunchTitle.setBackgroundColor(Color.GRAY);
+			}
+			
 			return row;
 		} else { // checked list
 			View row = convertView;
@@ -116,11 +121,8 @@ import android.widget.TextView;
 
 		}
 		for (int i = 0; i < preferredMeals.size(); i++) {
-
-			if (preferredMeals.get(i).contains(meal)) {
+			if (preferredMeals.get(i).contains(meal)) 
 				return true;
-			} else
-				return false;
 		}
 		return false;
 	}

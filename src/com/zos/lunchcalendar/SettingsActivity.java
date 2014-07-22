@@ -200,7 +200,7 @@ public class SettingsActivity extends Activity {
 		ArrayList<PendingIntent> pendingIntent = new ArrayList<PendingIntent>();
 		ArrayList<Intent> Intent = new ArrayList<Intent>();
 		for (int i = 0; i < notifyTime.size(); i++) {
-			if (System.currentTimeMillis() > notifyTime.get(i)) {
+			if (System.currentTimeMillis() < notifyTime.get(i)) {
 				Intent.add(new Intent(SettingsActivity.this, MyReceiver.class));
 				Intent.get(i).putExtra("MEAL", "FOOOOOD");
 				pendingIntent.add(PendingIntent.getBroadcast(
