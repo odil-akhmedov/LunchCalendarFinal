@@ -84,67 +84,7 @@ public class MainActivity extends Activity {
 		}
 		updateJSON = (Button)findViewById(R.id.button1);
 		set_update_date(); // SET UPDATE DATE -ZR
-		startParsing();
-		// adapter = new CalendarAdapters(getApplicationContext());
-		// Notifications
-
-		String startTime = "2014-07-20 21:00:00";
-
-		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-		long notifyTime;
-		Date date = null;
-		try {
-			date = sdf.parse(startTime);
-		} catch (ParseException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		// Calendar calendar = Calendar.getInstance();
-		// calendar.setTimeInMillis(date.getTime());
-		notifyTime = date.getTime();
-
-		System.out.println("Notifytime = " + notifyTime);
-
-		sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
-
-		preferredMealsFromArray = sharedPreferences.getStringSet(
-				"PreferredMeals", null);
-
-		/*
-		 * Calendar calendar = Calendar.getInstance();
-		 * 
-		 * calendar.set(2014, 6, 20, 20, 48, 4); //omg months start from 0 o_O
-		 * 
-		 * Intent myIntent = new Intent(MainActivity.this, MyReceiver.class);
-		 * pendingIntent = PendingIntent.getBroadcast(MainActivity.this, 0,
-		 * myIntent,0);
-		 * 
-		 * AlarmManager alarmManager =
-		 * (AlarmManager)getSystemService(ALARM_SERVICE);
-		 * alarmManager.set(AlarmManager.RTC, calendar.getTimeInMillis(),
-		 * pendingIntent); alarmManager.set(AlarmManager.RTC,
-		 * System.currentTimeMillis(), pendingIntent);
-		 * 
-		 * 
-		 * NotificationManager notificationManager = (NotificationManager)
-		 * getSystemService(NOTIFICATION_SERVICE);
-		 * 
-		 * String longText = "Meals you saved is going to be served soon";
-		 * 
-		 * PendingIntent pIntent = PendingIntent.getActivity(
-		 * getApplicationContext(), 0, new Intent(), // add this
-		 * PendingIntent.FLAG_UPDATE_CURRENT);
-		 * 
-		 * Notification n = new Notification.Builder(this)
-		 * .setContentTitle("Your favorite meal spotted!")
-		 * .setContentText("Subject").setSmallIcon(R.drawable.ic_launcher)
-		 * .setContentIntent(pIntent).setAutoCancel(true)
-		 * .addAction(R.drawable.ic_launcher, "More", pIntent) .setStyle(new
-		 * Notification.BigTextStyle().bigText(longText)).build();
-		 * 
-		 * notificationManager.notify(0, n);
-		 */
-
+		startParsing();		
 	}
 
 	
@@ -279,8 +219,7 @@ public class MainActivity extends Activity {
 		Toast.makeText(MainActivity.this, "Updating...", Toast.LENGTH_SHORT).show(); // Notify user of process taking place
 		obj = new JSONCalendarParser(url, getApplicationContext());
 		obj.fetchJSON();
-		while (obj.parsingComplete)
-			;
+		while(obj.parsingComplete);
 
 		result = obj.getContentFromJson();
 
