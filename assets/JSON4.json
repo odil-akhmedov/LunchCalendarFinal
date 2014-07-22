@@ -1,0 +1,26 @@
+{
+    "version": "1.0",
+    "encoding": "UTF-8",
+    "feed": {
+        "xmlns": "http://www.w3.org/2005/Atom",
+        "xmlns$openSearch": "http://a9.com/-/spec/opensearchrss/1.0/",
+        "xmlns$gCal": "http://schemas.google.com/gCal/2005",
+        "xmlns$gd": "http://schemas.google.com/g/2005",
+        "id": {
+            "$t": "http://www.google.com/calendar/feeds/gqccak2junkb7eup9ls76k919c%40group.calendar.google.com/public/full"
+        },
+        "updated": {
+            "$t": "2014-07-10T22:43:31.000Z"
+        },
+        "category": [
+            {
+                "scheme": "http://schemas.google.com/g/2005#kind",
+                "term": "http://schemas.google.com/g/2005#event"
+            }
+        ],
+        "title": {
+            "$t": "BoooooBaaaaas",
+            "type": "css"
+        }
+    }
+}

@@ -1,0 +1,20 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.wsu.flashcardsaok.MainActivity" >
+
+    <item
+        android:id="@+id/listViewMode"
+        android:title="@string/listViewMode"
+        android:titleCondensed="@string/listViewMode">
+    </item>
+    <item
+        android:id="@+id/gridViewMode"
+        android:title="@string/gridViewMode"
+        android:titleCondensed="@string/gridViewMode">
+    </item>
+    <item
+        android:id="@+id/settings"
+        android:title="@string/settings"
+        android:titleCondensed="@string/settings">
+    </item>
+</menu>

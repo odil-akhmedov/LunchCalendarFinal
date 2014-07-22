@@ -1,0 +1,467 @@
+{
+    "version": "1.0",
+    "encoding": "UTF-8",
+    "feed": {
+        "xmlns": "http://www.w3.org/2005/Atom",
+        "xmlns$openSearch": "http://a9.com/-/spec/opensearchrss/1.0/",
+        "xmlns$gCal": "http://schemas.google.com/gCal/2005",
+        "xmlns$gd": "http://schemas.google.com/g/2005",
+        "id": {
+            "$t": "http://www.google.com/calendar/feeds/gqccak2junkb7eup9ls76k919c%40group.calendar.google.com/public/full"
+        },
+        "updated": {
+            "$t": "2014-07-08T23:01:54.000Z"
+        },
+        "category": [
+            {
+                "scheme": "http://schemas.google.com/g/2005#kind",
+                "term": "http://schemas.google.com/g/2005#event"
+            }
+        ],
+        "title": {
+            "$t": "Elementary school lunch menu",
+            "type": "text"
+        },
+        "subtitle": {
+            "$t": "Troy school district elementary school lunch menu\n\nhttp://www.troy.k12.mi.us/files/_ycGsJ_/4548e19b441a42fa3745a49013852ec4/Elementary_Menu_April_2014.pdf",
+            "type": "text"
+        },
+        "link": [
+            {
+                "rel": "alternate",
+                "type": "text/html",
+                "href": "http://www.google.com/calendar/embed?src=gqccak2junkb7eup9ls76k919c%40group.calendar.google.com"
+            },
+            {
+                "rel": "http://schemas.google.com/g/2005#feed",
+                "type": "application/atom+xml",
+                "href": "http://www.google.com/calendar/feeds/gqccak2junkb7eup9ls76k919c%40group.calendar.google.com/public/full"
+            },
+            {
+                "rel": "http://schemas.google.com/g/2005#batch",
+                "type": "application/atom+xml",
+                "href": "http://www.google.com/calendar/feeds/gqccak2junkb7eup9ls76k919c%40group.calendar.google.com/public/full/batch"
+            },
+            {
+                "rel": "self",
+                "type": "application/atom+xml",
+                "href": "http://www.google.com/calendar/feeds/gqccak2junkb7eup9ls76k919c%40group.calendar.google.com/public/full?alt=json&max-results=15&singleevents=true&futureevents=true&sortorder=ascending&orderby=starttime"
+            }
+        ],
+        "author": [
+            {
+                "name": {
+                    "$t": "mbcc students"
+                },
+                "email": {
+                    "$t": "students.mbcc@gmail.com"
+                }
+            }
+        ],
+        "generator": {
+            "$t": "Google Calendar",
+            "version": "1.0",
+            "uri": "http://www.google.com/calendar"
+        },
+        "openSearch$totalResults": {
+            "$t": 4
+        },
+        "openSearch$startIndex": {
+            "$t": 1
+        },
+        "openSearch$itemsPerPage": {
+            "$t": 15
+        },
+        "gCal$timezone": {
+            "value": "America/New_York"
+        },
+        "gCal$timesCleaned": {
+            "value": 0
+        },
+        "gd$where": {
+            "valueString": ""
+        },
+        "entry": [
+            {
+                "id": {
+                    "$t": "http://www.google.com/calendar/feeds/gqccak2junkb7eup9ls76k919c%40group.calendar.google.com/public/full/ja6pmmek345uhjuc3g5ok6n9io"
+                },
+                "published": {
+                    "$t": "2014-07-04T05:22:58.000Z"
+                },
+                "updated": {
+                    "$t": "2014-07-04T05:22:58.000Z"
+                },
+                "category": [
+                    {
+                        "scheme": "http://schemas.google.com/g/2005#kind",
+                        "term": "http://schemas.google.com/g/2005#event"
+                    }
+                ],
+                "title": {
+                    "$t": "1. Hamburger, Cheeseburger w/Bun or Veggie Burger w/Bun 2. Grilled Cheese or 3. Garden Tossed Salad w/ Egg & Roll Tator Tots, Baked Beans, Broccoli, Orange Smiles, Grapes",
+                    "type": "text"
+                },
+                "content": {
+                    "$t": "",
+                    "type": "text"
+                },
+                "link": [
+                    {
+                        "rel": "alternate",
+                        "type": "text/html",
+                        "href": "http://www.google.com/calendar/event?eid=amE2cG1tZWszNDV1aGp1YzNnNW9rNm45aW8gZ3FjY2FrMmp1bmtiN2V1cDlsczc2azkxOWNAZw",
+                        "title": "alternate"
+                    },
+                    {
+                        "rel": "self",
+                        "type": "application/atom+xml",
+                        "href": "http://www.google.com/calendar/feeds/gqccak2junkb7eup9ls76k919c%40group.calendar.google.com/public/full/ja6pmmek345uhjuc3g5ok6n9io"
+                    }
+                ],
+                "author": [
+                    {
+                        "name": {
+                            "$t": "Adam Serruys"
+                        },
+                        "email": {
+                            "$t": "adam0982@gmail.com"
+                        }
+                    }
+                ],
+                "gd$comments": {
+                    "gd$feedLink": {
+                        "href": "http://www.google.com/calendar/feeds/gqccak2junkb7eup9ls76k919c%40group.calendar.google.com/public/full/ja6pmmek345uhjuc3g5ok6n9io/comments"
+                    }
+                },
+                "gd$eventStatus": {
+                    "value": "http://schemas.google.com/g/2005#event.confirmed"
+                },
+                "gd$where": [
+                    {
+                        "valueString": ""
+                    }
+                ],
+                "gd$who": [
+                    {
+                        "email": "gqccak2junkb7eup9ls76k919c@group.calendar.google.com",
+                        "rel": "http://schemas.google.com/g/2005#event.organizer",
+                        "valueString": "Elementary school lunch menu"
+                    }
+                ],
+                "gd$when": [
+                    {
+                        "endTime": "2014-07-15",
+                        "startTime": "2014-07-14"
+                    }
+                ],
+                "gd$transparency": {
+                    "value": "http://schemas.google.com/g/2005#event.transparent"
+                },
+                "gCal$anyoneCanAddSelf": {
+                    "value": "false"
+                },
+                "gCal$guestsCanInviteOthers": {
+                    "value": "true"
+                },
+                "gCal$guestsCanModify": {
+                    "value": "false"
+                },
+                "gCal$guestsCanSeeGuests": {
+                    "value": "true"
+                },
+                "gCal$sequence": {
+                    "value": 0
+                },
+                "gCal$uid": {
+                    "value": "ja6pmmek345uhjuc3g5ok6n9io@google.com"
+                }
+            },
+            {
+                "id": {
+                    "$t": "http://www.google.com/calendar/feeds/gqccak2junkb7eup9ls76k919c%40group.calendar.google.com/public/full/456feplvkigo1phjbddt5jbddk"
+                },
+                "published": {
+                    "$t": "2014-07-04T05:23:29.000Z"
+                },
+                "updated": {
+                    "$t": "2014-07-04T05:23:29.000Z"
+                },
+                "category": [
+                    {
+                        "scheme": "http://schemas.google.com/g/2005#kind",
+                        "term": "http://schemas.google.com/g/2005#event"
+                    }
+                ],
+                "title": {
+                    "$t": " 1. Macaroni & Cheese w/Crackers or 2. Grilled Cheese Sandwich or 3. Lift-Off Spinach Salad w/Dinner Roll Green Peas, Fresh Carrots, Grapes, Fresh Apple or Diced Pears",
+                    "type": "text"
+                },
+                "content": {
+                    "$t": "",
+                    "type": "text"
+                },
+                "link": [
+                    {
+                        "rel": "alternate",
+                        "type": "text/html",
+                        "href": "http://www.google.com/calendar/event?eid=NDU2ZmVwbHZraWdvMXBoamJkZHQ1amJkZGsgZ3FjY2FrMmp1bmtiN2V1cDlsczc2azkxOWNAZw",
+                        "title": "alternate"
+                    },
+                    {
+                        "rel": "self",
+                        "type": "application/atom+xml",
+                        "href": "http://www.google.com/calendar/feeds/gqccak2junkb7eup9ls76k919c%40group.calendar.google.com/public/full/456feplvkigo1phjbddt5jbddk"
+                    }
+                ],
+                "author": [
+                    {
+                        "name": {
+                            "$t": "Adam Serruys"
+                        },
+                        "email": {
+                            "$t": "adam0982@gmail.com"
+                        }
+                    }
+                ],
+                "gd$comments": {
+                    "gd$feedLink": {
+                        "href": "http://www.google.com/calendar/feeds/gqccak2junkb7eup9ls76k919c%40group.calendar.google.com/public/full/456feplvkigo1phjbddt5jbddk/comments"
+                    }
+                },
+                "gd$eventStatus": {
+                    "value": "http://schemas.google.com/g/2005#event.confirmed"
+                },
+                "gd$where": [
+                    {
+                        "valueString": ""
+                    }
+                ],
+                "gd$who": [
+                    {
+                        "email": "gqccak2junkb7eup9ls76k919c@group.calendar.google.com",
+                        "rel": "http://schemas.google.com/g/2005#event.organizer",
+                        "valueString": "Elementary school lunch menu"
+                    }
+                ],
+                "gd$when": [
+                    {
+                        "endTime": "2014-07-17",
+                        "startTime": "2014-07-16"
+                    }
+                ],
+                "gd$transparency": {
+                    "value": "http://schemas.google.com/g/2005#event.transparent"
+                },
+                "gCal$anyoneCanAddSelf": {
+                    "value": "false"
+                },
+                "gCal$guestsCanInviteOthers": {
+                    "value": "true"
+                },
+                "gCal$guestsCanModify": {
+                    "value": "false"
+                },
+                "gCal$guestsCanSeeGuests": {
+                    "value": "true"
+                },
+                "gCal$sequence": {
+                    "value": 0
+                },
+                "gCal$uid": {
+                    "value": "456feplvkigo1phjbddt5jbddk@google.com"
+                }
+            },
+            {
+                "id": {
+                    "$t": "http://www.google.com/calendar/feeds/gqccak2junkb7eup9ls76k919c%40group.calendar.google.com/public/full/r14a7acjq96hbkh3erckfqmac8"
+                },
+                "published": {
+                    "$t": "2014-07-08T23:01:54.000Z"
+                },
+                "updated": {
+                    "$t": "2014-07-08T23:01:54.000Z"
+                },
+                "category": [
+                    {
+                        "scheme": "http://schemas.google.com/g/2005#kind",
+                        "term": "http://schemas.google.com/g/2005#event"
+                    }
+                ],
+                "title": {
+                    "$t": " 1. Hamburger, Cheeseburger w/Bun or Veggie Burger w/Bun 2. Grilled Cheese or 3. Garden Tossed Salad w/ Egg & Roll Tator Tots, Baked Beans, Broccoli, Orange Smiles, Grapes",
+                    "type": "text"
+                },
+                "content": {
+                    "$t": "",
+                    "type": "text"
+                },
+                "link": [
+                    {
+                        "rel": "alternate",
+                        "type": "text/html",
+                        "href": "http://www.google.com/calendar/event?eid=cjE0YTdhY2pxOTZoYmtoM2VyY2tmcW1hYzggZ3FjY2FrMmp1bmtiN2V1cDlsczc2azkxOWNAZw",
+                        "title": "alternate"
+                    },
+                    {
+                        "rel": "self",
+                        "type": "application/atom+xml",
+                        "href": "http://www.google.com/calendar/feeds/gqccak2junkb7eup9ls76k919c%40group.calendar.google.com/public/full/r14a7acjq96hbkh3erckfqmac8"
+                    }
+                ],
+                "author": [
+                    {
+                        "name": {
+                            "$t": "Adam Serruys"
+                        },
+                        "email": {
+                            "$t": "adam0982@gmail.com"
+                        }
+                    }
+                ],
+                "gd$comments": {
+                    "gd$feedLink": {
+                        "href": "http://www.google.com/calendar/feeds/gqccak2junkb7eup9ls76k919c%40group.calendar.google.com/public/full/r14a7acjq96hbkh3erckfqmac8/comments"
+                    }
+                },
+                "gd$eventStatus": {
+                    "value": "http://schemas.google.com/g/2005#event.confirmed"
+                },
+                "gd$where": [
+                    {
+                        "valueString": ""
+                    }
+                ],
+                "gd$who": [
+                    {
+                        "email": "gqccak2junkb7eup9ls76k919c@group.calendar.google.com",
+                        "rel": "http://schemas.google.com/g/2005#event.organizer",
+                        "valueString": "Elementary school lunch menu"
+                    }
+                ],
+                "gd$when": [
+                    {
+                        "endTime": "2014-07-26",
+                        "startTime": "2014-07-25"
+                    }
+                ],
+                "gd$transparency": {
+                    "value": "http://schemas.google.com/g/2005#event.transparent"
+                },
+                "gCal$anyoneCanAddSelf": {
+                    "value": "false"
+                },
+                "gCal$guestsCanInviteOthers": {
+                    "value": "true"
+                },
+                "gCal$guestsCanModify": {
+                    "value": "false"
+                },
+                "gCal$guestsCanSeeGuests": {
+                    "value": "true"
+                },
+                "gCal$sequence": {
+                    "value": 0
+                },
+                "gCal$uid": {
+                    "value": "r14a7acjq96hbkh3erckfqmac8@google.com"
+                }
+            },
+            {
+                "id": {
+                    "$t": "http://www.google.com/calendar/feeds/gqccak2junkb7eup9ls76k919c%40group.calendar.google.com/public/full/4m5jv1kt2su77riarfcr6a5tq0"
+                },
+                "published": {
+                    "$t": "2014-07-04T05:57:51.000Z"
+                },
+                "updated": {
+                    "$t": "2014-07-04T05:57:51.000Z"
+                },
+                "category": [
+                    {
+                        "scheme": "http://schemas.google.com/g/2005#kind",
+                        "term": "http://schemas.google.com/g/2005#event"
+                    }
+                ],
+                "title": {
+                    "$t": "1. Popcorn Chicken w/Soft Roll or 2. Grilled Cheese or 3. Minnie Mouse Salad w/Dinner Roll Sweet Potato Fries Broccoli, Orange Smiles or Fresh Apple",
+                    "type": "text"
+                },
+                "content": {
+                    "$t": "",
+                    "type": "text"
+                },
+                "link": [
+                    {
+                        "rel": "alternate",
+                        "type": "text/html",
+                        "href": "http://www.google.com/calendar/event?eid=NG01anYxa3Qyc3U3N3JpYXJmY3I2YTV0cTAgZ3FjY2FrMmp1bmtiN2V1cDlsczc2azkxOWNAZw",
+                        "title": "alternate"
+                    },
+                    {
+                        "rel": "self",
+                        "type": "application/atom+xml",
+                        "href": "http://www.google.com/calendar/feeds/gqccak2junkb7eup9ls76k919c%40group.calendar.google.com/public/full/4m5jv1kt2su77riarfcr6a5tq0"
+                    }
+                ],
+                "author": [
+                    {
+                        "name": {
+                            "$t": "Adam Serruys"
+                        },
+                        "email": {
+                            "$t": "adam0982@gmail.com"
+                        }
+                    }
+                ],
+                "gd$comments": {
+                    "gd$feedLink": {
+                        "href": "http://www.google.com/calendar/feeds/gqccak2junkb7eup9ls76k919c%40group.calendar.google.com/public/full/4m5jv1kt2su77riarfcr6a5tq0/comments"
+                    }
+                },
+                "gd$eventStatus": {
+                    "value": "http://schemas.google.com/g/2005#event.confirmed"
+                },
+                "gd$where": [
+                    {
+                        "valueString": ""
+                    }
+                ],
+                "gd$who": [
+                    {
+                        "email": "gqccak2junkb7eup9ls76k919c@group.calendar.google.com",
+                        "rel": "http://schemas.google.com/g/2005#event.organizer",
+                        "valueString": "Elementary school lunch menu"
+                    }
+                ],
+                "gd$when": [
+                    {
+                        "endTime": "2014-08-14",
+                        "startTime": "2014-08-13"
+                    }
+                ],
+                "gd$transparency": {
+                    "value": "http://schemas.google.com/g/2005#event.transparent"
+                },
+                "gCal$anyoneCanAddSelf": {
+                    "value": "false"
+                },
+                "gCal$guestsCanInviteOthers": {
+                    "value": "true"
+                },
+                "gCal$guestsCanModify": {
+                    "value": "false"
+                },
+                "gCal$guestsCanSeeGuests": {
+                    "value": "true"
+                },
+                "gCal$sequence": {
+                    "value": 0
+                },
+                "gCal$uid": {
+                    "value": "4m5jv1kt2su77riarfcr6a5tq0@google.com"
+                }
+            }
+        ]
+    }
+}
