@@ -40,7 +40,7 @@ public class MultiSelectionSpinner extends Spinner implements
 	}
 
 	public void onClick(DialogInterface dialog, int which, boolean isChecked) {
-		setCheckedItemsFromPrefs();
+		//setCheckedItemsFromPrefs();
 		if (mSelection != null && which < mSelection.length) {
 			mSelection[which] = isChecked;
 
