@@ -25,7 +25,6 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ArrayAdapter;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.GridView;
 import android.widget.ImageView;
@@ -54,7 +53,6 @@ public class MainActivity extends Activity {
 	ArrayList<String> preferredMeals = new ArrayList<String>();
 	String preferredDay; // Day before, same day...
 
-	Button update;
 	Date notificationTime;
 	private PendingIntent pendingIntent;
 
@@ -82,15 +80,6 @@ public class MainActivity extends Activity {
 			setContentView(R.layout.activity_main_grid);
 			break;
 		}
-		update = (Button)findViewById(R.id.updateTime);
-		update.setOnClickListener(new View.OnClickListener() {
-			
-			@Override
-			public void onClick(View v) {
-				// TODO Auto-generated method stub
-				
-			}
-		});
 
 		set_update_date(); // SET UPDATE DATE -ZR
 		startParsing();
@@ -192,12 +181,7 @@ public class MainActivity extends Activity {
 		load_update_date();
 		TextView txt_up_date = (TextView) findViewById(R.id.txt_date);
 		
-		//txt_up_date.setText(Global.update_date);
-		Calendar c = Calendar.getInstance();
-        SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm");
-        String formattedDate = df.format(c.getTime());
-		
-		txt_up_date.setText(formattedDate);
+		txt_up_date.setText(Global.update_date);
 	}
 	
 	
@@ -229,7 +213,7 @@ public class MainActivity extends Activity {
 	protected void onResume() {
 		// TODO Auto-generated method stub
 		super.onResume();
-		//set_update_date(); // SET UPDATE DATE -ZR
+		set_update_date(); // SET UPDATE DATE -ZR
 		Log.v(TAG, "onResume method called");
 	}
 
