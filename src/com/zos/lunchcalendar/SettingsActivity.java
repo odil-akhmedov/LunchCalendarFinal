@@ -13,6 +13,7 @@ import java.util.Set;
 
 import android.support.v7.app.ActionBarActivity;
 import android.annotation.SuppressLint;
+import android.app.Activity;
 import android.app.AlarmManager;
 import android.app.PendingIntent;
 import android.content.Intent;
@@ -36,7 +37,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 @SuppressLint("SimpleDateFormat")
-public class SettingsActivity extends ActionBarActivity {
+public class SettingsActivity extends Activity {
 
 	private JSONCalendarParser obj;
 	private ArrayList<String> mealsListText = new ArrayList<String>();
