@@ -33,7 +33,7 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-@SuppressLint("SimpleDateFormat")
+@SuppressLint({ "SimpleDateFormat", "NewApi" })
 public class MainActivity extends Activity {
 	final String TAG = "MainActivity";
 	// Changed view type to global value to fix changing problem. -ZR
@@ -157,6 +157,7 @@ public class MainActivity extends Activity {
 		super.onResume();
 		set_update_date(); // SET UPDATE DATE -ZR
 		Log.v(TAG, "onResume method called");
+		super.recreate();
 	}
 
 	@Override
